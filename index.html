@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxcima</title>
+    <link rel="icon" type="images/logo.png" href="images/logo.png" alt="logo_icon">
+    <link rel="stylesheet" href="assests/output.css">
+    <link rel="stylesheet" href="assests/input.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</head>
+
+<body class="m-4 scroll-smooth">
+    <header>
+
+
+        <nav class="fixed w-full z-20 top-0 start-0 bg-blue-600 dark:bg-gray-900">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="images/navlogo.png" class="h-8" alt="navbar_logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Luxcima</span>
+                </div>
+                <div class="flex justify-end">
+                    <div class="md:hidden flex items-center justify-center py-2 px-3">
+                        <label class="inline-flex items-center cursor-pointer">
+                            <input type="checkbox" value="" class="sr-only peer" name="night_mode_toggle">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                            <!-- <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span> -->
+                        </label>
+                    </div>
+                    <button data-collapse-toggle="navbar-default" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-l md:flex-row lg:space-x-8 rtl:space-x-reverse md:mt-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="#home"
+                                class="block py-2 px-3 lg:p-2 text-white rounded-lg md:bg-transparent md:text-white-700 md:p-2 dark:text-white hover:text-slate-900 hover:bg-slate-100 md:dark:text-blue-500"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about"
+                                class="block py-2 px-3 lg:p-2 text-white rounded-lg md:bg-transparent md:text-white-700 md:p-2 dark:text-white hover:text-slate-900 hover:bg-slate-100 md:dark:text-blue-500">About</a>
+                        </li>
+                        <li>
+                            <a href="#skills"
+                                class="block py-2 px-3 lg:p-2 text-white rounded-lg md:bg-transparent md:text-white-700 md:p-2 dark:text-white hover:text-slate-900 hover:bg-slate-100 md:dark:text-blue-500">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#certifications"
+                                class="block py-2 px-3 lg:p-2 text-white rounded-lg md:bg-transparent md:text-white-700 md:p-2 dark:text-white hover:text-slate-900 hover:bg-slate-100 md:dark:text-blue-500">Certifications</a>
+                        </li>
+                        <li>
+                            <a href="#projects"
+                                class="block py-2 px-3 lg:p-2 text-white rounded-lg md:bg-transparent md:text-white-700 md:p-2 dark:text-white hover:text-slate-900 hover:bg-slate-100 md:dark:text-blue-500">Project</a>
+                        </li>
+                        <li>
+                            <a href="#contact"
+                                class="block py-2 px-3 lg:p-2 text-white rounded-lg md:bg-transparent md:text-white-700 md:p-2 dark:text-white hover:text-slate-900 hover:bg-slate-100 md:dark:text-blue-500">Contact</a>
+                        </li>
+                        <li>
+                            <div class="hidden md:block flex items-center justify-center py-2 px-3 lg:p-2">
+                                <label class="inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer" name="night_mode_toggle">
+                                    <div
+                                        class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- 
+        <nav class="fixed w-full z-20 p-4 top-0 start-0 bg-blue-600 border to-black">
+            <div class="flex">
+                <div class="w-1/4 justify-start flex">
+                    <img src="images/navlogo.png" alt="Logo">
+                    <span class="hidden md:block text-white font-medium text-2xl ml-2 pt-1">Luxcima</span>
+                </div>
+                <div class="hidden w-3/4 justify-end md:flex md:space-x-0 lg:space-x-6">
+                    <a href="#home"
+                        class=" text-white rounded-lg px-3 py-2 font-medium hover:bg-slate-100 hover:text-slate-900">Home</a>
+                    <a href="#about"
+                        class="text-white rounded-lg px-3 py-2  font-medium hover:bg-slate-100 hover:text-slate-900">About</a>
+                    <a href="#skills"
+                        class=" text-white rounded-lg px-3 py-2 font-medium hover:bg-slate-100 hover:text-slate-900">Skills</a>
+                    <a href="#certifications"
+                        class="text-white rounded-lg px-3 py-2 font-medium hover:bg-slate-100 hover:text-slate-900">Certifications</a>
+                    <a href="#projects"
+                        class="text-white rounded-lg px-3 py-2 font-medium hover:bg-slate-100 hover:text-slate-900">Projects</a>
+                    <a href="#contact"
+                        class=" text-white rounded-lg px-3 py-2 font-medium hover:bg-slate-100 hover:text-slate-900">Contact</a>
+                </div>
+            </div>
+        </nav> -->
+    </header>
+
+    <section id="home" class=" bg-gray-100 pt-20 h-fit">
+        <article>
+            <div class="flex flex-col-reverse md:flex-row justify-between items-center">
+                <div class="md:mr-10 md:mt-10 md:w-1/2 md:p-10 md:flex-col justify-center">
+                    <p class="text-center md:text-left text-lg md:text-2xl text-gray-700 md:p-3">Hello There!</p>
+                    <div class="flex md:p-3 items-center justify-center md:items-start md:justify-start">
+                        <p class="text-2xl md:text-5xl text-gray-700">I'm </p>
+                        <p class="text-2xl md:text-5xl text-blue-700 pl-3 font-semibold italic"> Luxcima,</p>
+                    </div>
+                    <h4 class="text-center md:text-left lg:text-5xl md:text-3xl text-gray-700 p-2">Full Stack Engineer
+                    </h4>
+                    <p class="text-center md:text-left text-lg text-gray-700 md:p-3">I'm a trained full stack developer
+                        with experience in HTML, CSS
+                        & Node.JS. </p>
+                    <div
+                        class="flex flex-col p-5 md:p-0 md:flex-row justify-center md:justify-start items-center md:text-base space-x-4 md:mt-3">
+                        <a href="https://drive.google.com/uc?export=download&id=1BNLqmJFxm-aoenEJ45fUJiEhQuAD3Bfr"
+                            class="bg-blue-600 text-white px-6 py-3 ml-3 mt-3 text-nowrap rounded-full shadow-md hover:shadow-lg hover:bg-blue-700  font-semibold hover:scale-110 transition-duration-300 ease-in-out">
+                            Download CV
+                        </a>
+
+                        <!-- <button
+                        class="bg-blue-600 text-white px-6 py-3 ml-3 mt-3 rounded-full shadow-md hover:shadow-lg font-semibold hover:scale-110 transition duration-300 ease-in-out">Download
+                        CV</button> -->
+
+                        <!-- Social Media Icons -->
+
+                        <div class="flex space-x-3 pt-3 md:pt-0 mt-3">
+
+                            <a href="https://www.linkedin.com/in/luxcima/" target="_blank"
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-blue-500 hover:text-white transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="https://github.com/Luxcima-L" target="_blank"
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-900 hover:text-white transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/the_luxcima/" target="_blank"
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.threads.com/@the_luxcima" target="_blank"
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-900 hover:text-white transition">
+                                <i class="fa-brands fa-threads"></i>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="md:mt-40 md:w-1/2 flex justify-center lg:mt-16 ">
+                    <img src="images/profile.png" alt="profile_image" class="animate-fadeInScale rounded-lg max-w-full">
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="about" class="bg-gray-100 h-fit mt-4">
+        <article>
+            <div class="md:p-10 flex justify-between items-center">
+                <div class="w-1/2 flex items-center md:p-16 justify-center">
+                    <img src="images/aboutprofile.png" alt="about_profile" class="rounded-lg">
+                </div>
+                <div class=" w-1/2 flex-col items-center justify-center">
+                    <h4 class="text-xs md:text-2xl pt-2 text-gray-700"> - About Me</h4>
+                    <p class="text-lg md:text-4xl lg:text-5xl pt-2 md:pt-5">Who is Luxcima?</p>
+
+                    <!-- Read More Section -->
+                    <details class="group">
+                        <summary class="list-none">
+                            <span
+                                class="  text-gray-700 text-xs md:text-base font-medium md:pt-3 leading-relaxed line-clamp-3 group-open:line-clamp-none">
+                                A motivated Full Stack Developer with a strong foundation in computer science and web
+                                technologies,
+                                supported by a Master of Computer Applications (MCA). Skilled in building responsive,
+                                user-friendly
+                                websites and applications using HTML, CSS, JavaScript, and backend programming concepts.
+                                Experienced
+                                in problem-solving, teaching programming languages (C, C++, Python, Java), and guiding
+                                students and
+                                professionals in technology adoption. Adept at combining technical expertise with design
+                                skills to
+                                deliver seamless digital experiences. Passionate about continuous learning,
+                                collaborative development,
+                                and creating scalable solutions that drive impact.
+                            </span>
+                            <span
+                                class="text-blue-600 font-medium hover:underline cursor-pointer ml-0 group-open:hidden">
+                                Read More
+                            </span>
+                            <span
+                                class="text-blue-600 font-medium hover:underline cursor-pointer ml-0 hidden group-open:inline">
+                                Read Less
+                            </span>
+                        </summary>
+                    </details>
+    </section>
+
+    <section id="skills" class="bg-gray-100 h-fit mt-4">
+        <article>
+            <div class="pt-9 md:pt-20 md:pb-20">
+                <h4 class="text-3xl text-center text-gray-700 font-bold pt-10">My Skills</h4>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="flex-col items-center justify-center p-4 m-2 md:p-8 md:m-5 lg:p-16 lg:m-10 bg-gray-200 rounded-lg">
+
+                    <div class="flex justify-between mb-1">
+                        <span class="text-base font-medium text-blue-700 dark:text-white">HTML</span>
+                        <span class="text-sm font-medium text-blue-700 dark:text-white">95%</span>
+                    </div>
+                    <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                    <div class="flex justify-between mb-1 pt-10">
+                        <span class="text-base font-medium text-blue-700 dark:text-white">CSS</span>
+                        <span class="text-sm font-medium text-blue-700 dark:text-white">90%</span>
+                    </div>
+                    <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                    <div class="flex justify-between mb-1 pt-10">
+                        <span class="text-base font-medium text-blue-700 dark:text-white">JavaScript</span>
+                        <span class="text-sm font-medium text-blue-700 dark:text-white">80%</span>
+                    </div>
+                    <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                    <div class="flex justify-between mb-1 pt-10">
+                        <span class="text-base font-medium text-blue-700 dark:text-white">Java</span>
+                        <span class="text-sm font-medium text-blue-700 dark:text-white">75%</span>
+                    </div>
+                    <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                    <div class="flex justify-between mb-1 pt-10">
+                        <span class="text-base font-medium text-blue-700 dark:text-white">Node.JS</span>
+                        <span class="text-sm font-medium text-blue-700 dark:text-white">70%</span>
+                    </div>
+                    <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="flex-col items-center justify-center p-4 m-2 md:p-8 md:m-5 lg:p-16 lg:m-10">
+                    <div class="grid grid-cols-2">
+                        <div class="flex items-center justify-center p-3 md:p-1 lg:p-7">
+                            <div class="relative size-36">
+                                <svg class="size-full -rotate-90" viewBox="0 0 36 36"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Background Circle -->
+                                    <circle cx="18" cy="18" r="16" fill="none"
+                                        class="stroke-current text-gray-200 dark:text-neutral-700" stroke-width="2">
+                                    </circle>
+                                    <!-- Progress Circle -->
+                                    <circle cx="18" cy="18" r="16" fill="none"
+                                        class="stroke-current text-blue-600 dark:text-blue-500" stroke-width="2"
+                                        stroke-dasharray="100" stroke-dashoffset="10" stroke-linecap="round"></circle>
+                                </svg>
+                                <div class="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                                    <span
+                                        class="text-center text-2xl font-bold text-blue-600 dark:text-blue-500">90%</span>
+                                </div>
+                                <p class="text-sm md:text-1xl text-center">Creativity</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-3  md:p-1 lg:p-7">
+                            <div class="relative size-36">
+                                <svg class="size-full -rotate-90" viewBox="0 0 36 36"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Background Circle -->
+                                    <circle cx="18" cy="18" r="16" fill="none"
+                                        class="stroke-current text-gray-200 dark:text-neutral-700" stroke-width="2">
+                                    </circle>
+                                    <!-- Progress Circle -->
+                                    <circle cx="18" cy="18" r="16" fill="none"
+                                        class="stroke-current text-blue-600 dark:text-blue-500" stroke-width="2"
+                                        stroke-dasharray="100" stroke-dashoffset="5" stroke-linecap="round"></circle>
+                                </svg>
+                                <div class="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                                    <span
+                                        class="text-center text-2xl font-bold text-blue-600 dark:text-blue-500">95%</span>
+                                </div>
+                                <p class="text-sm md:text-1xl text-center">Team Work</p>
+
+                            </div>
+                        </div>
+                        <!-- </div>
+
+                    <div class="flex items-center justify-center"> -->
+                        <div class="flex items-center justify-center p-3  md:p-1 lg:p-7">
+                            <div class="relative size-36">
+                                <svg class="size-full -rotate-90" viewBox="0 0 36 36"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Background Circle -->
+                                    <circle cx="18" cy="18" r="16" fill="none"
+                                        class="stroke-current text-gray-200 dark:text-neutral-700" stroke-width="2">
+                                    </circle>
+                                    <!-- Progress Circle -->
+                                    <circle cx="18" cy="18" r="16" fill="none"
+                                        class="stroke-current text-blue-600 dark:text-blue-500" stroke-width="2"
+                                        stroke-dasharray="100" stroke-dashoffset="2" stroke-linecap="round"></circle>
+                                </svg>
+                                <div class="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                                    <span
+                                        class="text-center text-2xl font-bold text-blue-600 dark:text-blue-500">85%</span>
+                                </div>
+                                <p class="text-sm md:text-1xl text-center">Communication</p>
+
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-3 md:p-1 lg:p-7">
+                            <div class="relative size-36">
+                                <svg class="size-full -rotate-90" viewBox="0 0 36 36"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Background Circle -->
+                                    <circle cx="18" cy="18" r="16" fill="none"
+                                        class="stroke-current text-gray-200 dark:text-neutral-700" stroke-width="2">
+                                    </circle>
+                                    <!-- Progress Circle -->
+                                    <circle cx="18" cy="18" r="16" fill="none"
+                                        class="stroke-current text-blue-600 dark:text-blue-500" stroke-width="2"
+                                        stroke-dasharray="100" stroke-dashoffset="2" stroke-linecap="round"></circle>
+                                </svg>
+                                <div class="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                                    <span
+                                        class="text-center text-2xl font-bold text-blue-600 dark:text-blue-500">99%</span>
+                                </div>
+                                <p class="text-sm md:text-1xl text-center">Problem Solving</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="certifications" class="bg-gray-100 h-fit mt-4">
+        <div class="pt-9 md:pt-20 md:pb-20">
+            <h4 class="text-3xl text-center text-gray-700 font-bold pt-10">My Certifications</h4>
+        </div>
+        <article>
+            <div class=" bg-gray-100 grid md:grid-cols-1 lg:grid-cols-3 gap-6 p-2 md:p-10">
+                <div
+                    class=" bg-gray-200 rounded-2xl p-10 hover:shadow-lg hover:shadow-blue-600 transition duration-300 hover:scale-110">
+                    <h4 class="text-2xl text-center font-black text-blue-600">Python Bootcamp</h4><br>
+                    <p class="text-center">Successfully completed an online certification course focused on the
+                        fundamentals of Python programming. The training covered Python syntax, variables, data types,
+                        control structures, functions, and problem-solving techniques, providing a strong foundation for
+                        applying Python in real-world projects.</p>
+                    <div class="flex justify-center">
+                        <a href="images/certificate1.jpg" target="_blank" alt="python_certificate" class="inline-block  mt-6 p-2 bg-blue-600 text-white font-semibold rounded-full shadow-md 
+              hover:bg-blue-600 hover:shadow-blue-400 hover:scale-110 transition duration-300">
+                            View Certificate
+                        </a>
+                    </div>
+
+                </div>
+                <div
+                    class="bg-gray-200 rounded-2xl p-10 hover:shadow-lg hover:shadow-blue-600 transition duration-300 hover:scale-110">
+                    <h4 class="text-2xl text-center font-black text-blue-600">LinkedIn Marketing</h4>
+                    <p class="text-center pt-6">Successfully completed a certification program on LinkedIn Marketing
+                        Fundamentals, covering the essentials of creating and managing LinkedIn Pages, running targeted
+                        ad campaigns, engaging audiences, and analyzing performance to drive brand growth and lead
+                        generation.</p>
+                    <div class="flex justify-center">
+                        <a href="images/certificate2.pdf" target="_blank" alt="linkedin_certificate" class="inline-block  mt-6 p-2 bg-blue-600 text-white font-semibold rounded-full shadow-md 
+              hover:bg-blue-600 hover:shadow-blue-400 hover:scale-110 transition duration-300">
+                            View Certificate
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="bg-gray-200 rounded-lg p-10 hover:shadow-lg hover:shadow-blue-600 transition duration-300 hover:scale-110">
+                    <h4 class="text-2xl text-center font-black text-blue-600">Full Stack Development</h4>
+                    <p class="text-center pt-6">Successfully completed a certification course introducing the
+                        fundamentals of Full Stack Development. The program covered the basics of front-end and back-end
+                        development, with modules on Introduction to Full Stack Development and Getting Started with
+                        Visual Studio Code.</p>
+                    <div class="flex justify-center">
+                        <a href="images/certificate3.pdf" target="_blank" alt="full_stack_certificate" class="inline-block  mt-6 p-2 bg-blue-600 text-white font-semibold rounded-full shadow-md 
+              hover:bg-blue-600 hover:shadow-blue-400 hover:scale-110 transition duration-300">
+                            View Certificate
+                        </a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </article>
+    </section>
+
+    <section id="projects" class="bg-gray-100 h-fit mt-4">
+        <article>
+            <div class="pt-9 md:pt-20 md:pb-20">
+                <h4 class="text-3xl text-center text-gray-700 font-bold pt-10">My Projects</h4>
+            </div>
+            <!--Project First Row-->
+            <div class=" bg-gray-100 grid md:grid-cols-2 lg:grid-cols-3 gap-2 p-5">
+                <div class=" flex-col items-center justify-center bg-gray-200 rounded-lg p-10">
+                    <h4 class="text-center text-xl font-bold">Industrial Packaging Website</h4><br>
+                    <div
+                        class="flex-col bg-gray-200 p-5 outline-offset-2 rounded-2xl hover:shadow-lg hover:shadow-blue-600 transition duration-300 hover:scale-110">
+                        <div class="flex justify-center">
+                            <i class="fa-solid fa-box-open text-blue-600 text-5xl mb-4"></i>
+                        </div>
+
+                        <p class="text-center">Corporate website for FIBC manufacturer highlighting products,
+                            sustainability, and expertise. Showcases 30+ years of industry experience with a clean,
+                            professional design.</p>
+                        <div class="pt-5 flex justify-center">
+                            <button
+                                class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:shadow-xl hover:scale-100 ring-1 ring-offset-2 animate-pulse hover:bg-blue-600">
+                                <a href="https://github.com/Luxcima-L/Maris_Associates_Website" target="_blank"
+                                    class="text-white">
+                                    <svg xlmns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                </a></svg>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class=" flex-col items-center justify-center bg-gray-200 rounded-lg p-10">
+                    <h4 class="text-center text-xl font-bold">Corporate Website Frontend</h4><br>
+                    <div
+                        class="flex-col bg-gray-200 p-5 outline-offset-2 rounded-2xl hover:shadow-lg hover:shadow-blue-600 transition duration-300 hover:scale-110">
+                        <div class="flex justify-center">
+                            <i class="fa-solid fa-building-user text-blue-600 text-5xl mb-4"></i>
+                        </div>
+
+                        <p class="text-center">Built a responsive HTML/CSS/JavaScript site for Jeya Enterprises,
+                            focusing on clean UI, cross-device compatibility, and semantic markup.</p>
+                        <div class="pt-5 flex justify-center">
+                            <button
+                                class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:shadow-xl hover:scale-100 ring-1 ring-offset-2 animate-pulse hover:bg-blue-600">
+                                <a href="https://github.com/Luxcima/jeyaenterprises-1" target="_blank"
+                                    class="text-white">
+                                    <svg xlmns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                </a></svg>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class=" flex-col items-center justify-center bg-gray-200 rounded-lg p-10">
+                    <h4 class="text-center text-xl font-bold">Simple Web App</h4><br>
+                    <div
+                        class="flex-col bg-gray-200 p-5 outline-offset-2 rounded-2xl hover:shadow-lg hover:shadow-blue-600 transition duration-300 hover:scale-110">
+                        <div class="flex justify-center">
+                            <i class="fa-solid fa-calendar-days text-blue-600 text-5xl mb-4"></i>
+                        </div>
+
+                        <p class="text-center">A clean HTML-based age calculator that takes user input (date of birth)
+                            and computes current age. Built lightweight with semantic markup and minimal dependencies.
+                        </p>
+                        <div class="pt-5 flex justify-center">
+                            <button
+                                class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:shadow-xl hover:scale-100 ring-1 ring-offset-2 animate-pulse hover:bg-blue-600">
+                                <a href="https://github.com/Luxcima/Age-calculator" target="_blank" class="text-white">
+                                    <svg xlmns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                </a></svg>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!--Project Second Row-->
+                <div class=" flex-col items-center justify-center bg-gray-200 rounded-lg p-10">
+                    <h4 class="text-center text-xl font-bold">Tic-Tac-Toe Game Board</h4><br>
+                    <div
+                        class="flex-col bg-gray-200 p-5 outline-offset-2 rounded-2xl hover:shadow-lg hover:shadow-blue-600 transition duration-300 hover:scale-110">
+                        <div class="flex justify-center">
+                            <i class="fa-solid fa-border-all text-blue-600 text-5xl mb-4"></i>
+                        </div>
+
+                        <p class="text-center">A simple HTML-based Tic-Tac-Toe board interface, built using semantic
+                            markup. Designed to showcase layout skills and interactive styling.</p>
+                        <div class="pt-5 flex justify-center">
+                            <button
+                                class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:shadow-xl hover:scale-100 ring-1 ring-offset-2 animate-pulse hover:bg-blue-600">
+                                <a href="https://github.com/Luxcima/Tic-Tac-Toe-board" target="_blank"
+                                    class="text-white">
+                                    <svg xlmns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                </a></svg>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class=" flex-col items-center justify-center bg-gray-200 rounded-lg p-10">
+                    <h4 class="text-center text-xl font-bold">Score Keeper App</h4><br>
+                    <div
+                        class="flex-col bg-gray-200 p-5 outline-offset-2 rounded-2xl hover:shadow-lg hover:shadow-blue-600 transition duration-300 hover:scale-110">
+                        <div class="flex justify-center">
+                            <i class="fa-solid fa-ranking-star text-blue-600 text-5xl mb-4"></i>
+                        </div>
+
+                        <p class="text-center">A lightweight web app built with HTML, CSS, and JavaScript that tracks
+                            and displays scores dynamically. Designed to demonstrate DOM manipulation, real-time
+                            updating, and basic UI logic.</p>
+                        <div class="pt-5 flex justify-center">
+                            <button
+                                class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:shadow-xl hover:scale-100 ring-1 ring-offset-2 animate-pulse hover:bg-blue-600">
+                                <a href="https://github.com/Luxcima/score-keeper-program" target="_blank"
+                                    class="text-white">
+                                    <svg xlmns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                </a></svg>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class=" flex-col items-center justify-center bg-gray-200 rounded-lg p-10">
+                    <h4 class="text-center text-xl font-bold">Construction Service App</h4><br>
+                    <div
+                        class="flex-col bg-gray-200 p-5 outline-offset-2 rounded-2xl hover:shadow-lg hover:shadow-blue-600 transition duration-300 hover:scale-110">
+                        <div class="flex justify-center">
+                            <i class="fa-solid fa-mobile-screen text-blue-600 text-5xl mb-4"></i>
+                        </div>
+
+                        <p class="text-center">Mobile app showcasing JKS Plaster’s gypsum services and projects with
+                            client-friendly interface.Helps customers explore plastering solutions and connect directly
+                            with the business.</p>
+                        <div class="pt-5 flex justify-center">
+                            <button
+                                class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:shadow-xl hover:scale-100 ring-1 ring-offset-2 animate-pulse hover:bg-blue-600">
+                                <a href="https://drive.google.com/drive/folders/1P78oKK_KBkOX4BQY07YSTR_e7Z3SQvzr?usp=sharing"
+                                    target="_blank" class="text-white">
+                                    <svg xlmns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                </a></svg>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+    <section id="contact" class=" bg-gray-100 h-fit mt-4">
+        <div class="pt-9 md:pt-20 md:pb-20">
+            <h4 class="text-3xl text-center text-gray-700 font-bold pt-10">Contact Me!</h4>
+        </div>
+        <div class="p-2 md:p-10 md:ml-5 lg:ml-40 md:mr-5 lg:mr-40">
+            <form class="bg-white shadow-lg rounded-lg p-4 md:p-10">
+                <div class="mb-4">
+                    <label for="name" class="text-gray-700 font-medium">Name</label><br>
+                    <input type="text" id="name" placeholder="Enter your name"
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required><br>
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="text-gray-700 font-medium">Email</label><br>
+                    <input type="email" id="email" placeholder="Enter your email"
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required><br>
+                </div>
+
+                <div class="mb-4">
+                    <label for="phone" class="text-gray-700 font-medium"> Phone Number</label><br>
+                    <input type="tel" id="phone" placeholder="Enter phone number"
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required><br>
+                </div>
+
+                <div class="mb-4">
+                    <label for="message" class="text-gray-700 font-medium">Message</label><br>
+                    <textarea id="message" placeholder="Type your message"
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required></textarea><br>
+                </div>
+
+                <button type="submit"
+                    class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:bg-blue-700  font-semibold hover:scale-110 transition-duration-300 ease-in-out">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <div>
+        <footer>
+            <div class="text-center bg-blue-600 text-white flex-col items-center justify-center">
+                <div class="flex justify-center space-x-9 p-4">
+
+                    <a href="mailto:info.luxcima@gmail.com" class="group inline-flex items-center justify-start
+          w-12 h-12 rounded-full bg-gray-100
+          hover:min-w-56 focus:w-56 overflow-hidden cursor-pointer
+          px-0 hover:px-4 focus:px-4 hover:scale-110 transition duration-300 ease-in-out">
+
+
+                        <i class=" fill-blue-600 fas fa-envelope text-blue-600 text-lg flex-shrink-0 ml-4"></i>
+
+
+                        <span class="ml-1.5 opacity-0 group-hover:opacity-100 group-focus:opacity-100
+               text-gray-700 text-sm font-medium whitespace-nowrap">
+                            info.luxcima@gmail.com
+                        </span>
+                    </a>
+
+
+
+                    <a href="tel:+91 6379618537" class="group inline-flex items-center justify-start
+          w-12 h-12 rounded-full bg-gray-100
+          hover:w-48 focus:w-48 overflow-hidden cursor-pointer
+          px-0 hover:px-4 focus:px-4 hover:scale-110 transition duration-300 ease-in-out">
+
+
+                        <i class="fas fa-phone text-blue-600 text-lg flex-shrink-0 ml-4"></i>
+
+
+                        <span class="ml-3 opacity-0 group-hover:opacity-100 group-focus:opacity-100
+               text-gray-700 text-sm font-medium whitespace-nowrap">
+                            +91 6379618537
+                        </span>
+                    </a>
+
+                </div>
+                <div class="p-3">
+                    <p>&copy; 2025 Luxcima. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
